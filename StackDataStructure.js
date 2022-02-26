@@ -40,9 +40,23 @@ class Stack
 
         }    
     }
+
+    peek()  //Peek top item from the Stack : Returns the top item of the Stack.
+    {
+        if (this.first == -1)
+        {  
+           console.log ("There is no item in the Stack. Stack is Empty!","\n") //Display message when there are no elements in the stack
+           return null;
+        }
+        else
+        {
+           console.log ("The top item after the stack peeked is " + this.array[this.first],"\n");
+        }
+    }
 }
 
 const s = new Stack (5);
 s.push(1);
 s.push(2);
 s.pop();
+s.peek();
