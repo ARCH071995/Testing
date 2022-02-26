@@ -25,8 +25,24 @@ class Stack
            return this.first;
         }
     }
+
+    pop() //Pop an item from the Stack : Removes and Returns the top item of the Stack.
+    { 
+        if (this.first == -1) 
+        {  
+           console.log ("Stack Underflow","\n") //Display message when there are no elements in the stack
+        }
+        else
+        {
+           console.log ("The top item after the stack popped is " + this.array[this.first],"\n");
+           this.first--;
+           return this.first;
+
+        }    
+    }
 }
 
 const s = new Stack (5);
 s.push(1);
 s.push(2);
+s.pop();
