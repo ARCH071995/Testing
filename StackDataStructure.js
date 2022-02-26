@@ -53,10 +53,18 @@ class Stack
            console.log ("The top item after the stack peeked is " + this.array[this.first],"\n");
         }
     }
+    
+    size() //The current size and total size of the stack
+    {
+     console.log ("The current size of the stack is " + this.array.length,"\n");
+     console.log ("The total size of the stack is " + this.maxsize,"\n");
+    }
 }
 
+ 
 const s = new Stack (5);
 s.push(1);
 s.push(2);
 s.pop();
 s.peek();
+s.size();
